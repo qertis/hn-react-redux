@@ -1,0 +1,47 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "standard-react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "plugins": [
+    "babel",
+    "react",
+    "promise",
+    "html"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "__DEV__": false,
+    "__TEST__": false,
+    "__PROD__": false,
+    "__COVERAGE__": false
+  },
+  "rules": {
+    "key-spacing": "off",
+    "jsx-quotes": [
+      2,
+      "prefer-single"
+    ],
+    "max-len": [
+      2,
+      120,
+      2
+    ],
+    "object-curly-spacing": [
+      2,
+      "always"
+    ],
+    "comma-dangle": "off",
+    "brace-style": "off",
+    "no-var": "off",
+    "require-jsdoc": "off"
+  }
+}
