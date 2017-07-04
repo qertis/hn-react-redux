@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class HomeView extends React.Component {
 
@@ -7,12 +8,19 @@ class HomeView extends React.Component {
   }
 
   componentDidMount() {
-    window.location = '/news/1';
+    this.props.router.push('/news/1');
   }
 
   render() {
-    return (<div></div>);
+    return (
+      <div />
+    );
   }
 }
+HomeView.propTypes = {
+  router: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired,
+};
 
 export default HomeView;

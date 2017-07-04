@@ -5,17 +5,17 @@ export const REMOVE_FROM_FAVOURITE = 'REMOVE_FROM_FAVOURITE';
 
 // Actions
 
-export const onSaveToFavourite = (item = {}) => ({
+export const saveToFavourite = (item = {}) => ({
   type: SAVE_TO_FAVOURITE,
   data: item
 });
 
-export const onRemoveFromFavourite = (item = {}) => ({
+export const removeFromFavourite = (item = {}) => ({
   type: REMOVE_FROM_FAVOURITE,
-  data: item
+  data: item,
 });
 
-function updateStorage(state) {
+const updateStorage = state => {
   try {
     localStorage.setItem('favourites', JSON.stringify(state.map(({id}) => ({id}))));
   } catch (e) {
@@ -23,20 +23,20 @@ function updateStorage(state) {
   }
 
   return state;
-}
+};
 
-function getStorage() {
+const getStorage = () => {
   try {
     return JSON.parse(localStorage.getItem('favourites')) || [];
   } catch (e) {
     console.error(e);
     return [];
   }
-}
+};
 
 export const actions = {
-  onSaveToFavourite,
-  onRemoveFromFavourite,
+  saveToFavourite,
+  removeFromFavourite,
 };
 
 // Action Handlers
@@ -59,7 +59,7 @@ const initialState = getStorage();
 const reducer = (state = initialState, action) => {
   const handler = ACTION_HANDLERS[action.type];
 
-  return handler ? handler(state, action) : state
+  return handler ? handler(state, action) : state;
 };
 
 export default reducer;

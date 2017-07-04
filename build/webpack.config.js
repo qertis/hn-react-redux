@@ -142,7 +142,7 @@ config.module.rules.push({
   ['ttf', 'application/octet-stream'],
   ['eot', 'application/vnd.ms-fontobject'],
   ['svg', 'image/svg+xml'],
-].forEach((font) => {
+].forEach(font => {
   const [extension, mimetype] = font;
 
   config.module.rules.push({
@@ -153,7 +153,7 @@ config.module.rules.push({
       limit: 10000,
       mimetype,
     },
-  })
+  });
 });
 
 // HTML Template
@@ -211,7 +211,7 @@ if (__PROD__) {
         join_vars: true,
       },
     })
-  )
+  );
 }
 
 module.exports = config;

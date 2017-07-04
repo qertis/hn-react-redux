@@ -1,7 +1,7 @@
 {
   "name": "hn-react-redux",
   "version": "0.0.1",
-  "description": "Hacker News using React, Redux, and React-Router",
+  "description": "Hacker News Clone using React, Redux, and React-Router",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",

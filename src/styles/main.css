@@ -105,6 +105,7 @@ li {
 .title {
   flex: 1;
   padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .title > a {
@@ -143,8 +144,9 @@ li {
 }
 
 .forwardback {
-  padding-top: 16px;
   display: flex;
+  align-items: baseline;
+  padding-top: 16px;
 }
 
 .forwardback > a {
@@ -167,5 +169,7 @@ li {
   background: transparent;
   outline: none;
   vertical-align: text-bottom;
+  text-align: center;
+  line-height: 0;
   cursor: pointer;
 }

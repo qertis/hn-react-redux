@@ -11,7 +11,7 @@ export const locationChange = (location = '/') => ({
   data: location
 });
 
-export const updateLocation = ({dispatch}) => (next) => dispatch(locationChange(next));
+export const updateLocation = ({dispatch}) => next => dispatch(locationChange(next));
 
 // Reducer
 

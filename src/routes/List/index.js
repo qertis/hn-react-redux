@@ -1,4 +1,4 @@
-import {injectReducer, injectReducers} from '../../store/reducers';
+import {injectReducer} from '../../store/reducers';
 
 export default store => ({
   path: 'News/:id',
@@ -12,11 +12,11 @@ export default store => ({
 
       injectReducer(store, {
         key: 'list',
-        reducer: listReducer
+        reducer: listReducer,
       });
       injectReducer(store, {
         key: 'favourites',
-        reducer: favouriteReducer
+        reducer: favouriteReducer,
       });
 
       cb(null, ListView);

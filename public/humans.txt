@@ -1,9 +1,4 @@
 # Check it out: http://humanstxt.org/
 
 # TEAM
-
-    Denis Baskovsky -- TM -- @qertis
-
-# THANKS
-
-    <name>
+    Denis Baskovsky -- TL -- @qertis

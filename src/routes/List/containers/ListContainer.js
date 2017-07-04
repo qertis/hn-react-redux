@@ -1,14 +1,14 @@
 import {connect} from 'react-redux';
-import {onPrev, onNext, onLoad} from '../modules/list';
-import {onSaveToFavourite, onRemoveFromFavourite} from '../modules/favourite';
-import List from '../components/ListView';
+import {prevNews, nextNews, initNews} from '../modules/list';
+import {saveToFavourite, removeFromFavourite} from '../modules/favourite';
+import ListView from '../components/ListView';
 
 const mapDispatchToProps = {
-  onPrev,
-  onNext,
-  onLoad,
-  onSaveToFavourite,
-  onRemoveFromFavourite,
+  prevNews,
+  nextNews,
+  initNews,
+  saveToFavourite,
+  removeFromFavourite,
 };
 
 const mapStateToProps = ({list, favourites}) => ({
@@ -16,4 +16,4 @@ const mapStateToProps = ({list, favourites}) => ({
   favourites,
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(List);
+export default connect(mapStateToProps, mapDispatchToProps)(ListView);

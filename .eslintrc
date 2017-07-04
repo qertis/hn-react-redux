@@ -16,7 +16,8 @@
   ],
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
   "globals": {
     "__DEV__": false,
@@ -25,6 +26,7 @@
     "__COVERAGE__": false
   },
   "rules": {
+    "no-console": 0,
     "key-spacing": "off",
     "jsx-quotes": [
       2,
@@ -37,8 +39,9 @@
     ],
     "object-curly-spacing": [
       2,
-      "always"
+      "never"
     ],
+    "arrow-parens": 0,
     "comma-dangle": "off",
     "brace-style": "off",
     "no-var": "off",

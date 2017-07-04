@@ -6,7 +6,7 @@ const logger = require('../lib/logger');
 const webpackConfig = require('../webpack.config');
 const project = require('../../project.config');
 
-const runWebpackCompiler = (webpackConfig) =>
+const runWebpackCompiler = webpackConfig =>
   new Promise((resolve, reject) => {
     webpack(webpackConfig).run((err, stats) => {
       if (err) {

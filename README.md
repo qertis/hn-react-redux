@@ -1,4 +1,5 @@
-# Новостная лента Hacker News
+# Новостная лента Hacker News 
+[![Build Status](https://travis-ci.org/qertis/hn-react-redux.svg?branch=master)](https://travis-ci.org/qertis/hn-react-redux)
 
 Фичи
 ---
@@ -9,3 +10,11 @@
 Roadmap
 ---
 1. покрыть код тестами
+
+Install
+---
+```yarn```
+
+License
+---
+BSD-3-Clause

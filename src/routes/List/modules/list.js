@@ -31,22 +31,22 @@ const fetchNews = (type, [dispatch, getState]) => {
   });
 };
 
-export const onLoad = () => (...params) => fetchNews(null, params);
+export const initNews = () => (...params) => fetchNews(null, params);
 
-export const onPrev = () => (...params) => fetchNews(PAGE_DECREMENT, params);
+export const prevNews = () => (...params) => fetchNews(PAGE_DECREMENT, params);
 
-export const onNext = () => (...params) => fetchNews(PAGE_INCREMENT, params);
+export const nextNews = () => (...params) => fetchNews(PAGE_INCREMENT, params);
 
 export const actions = {
-  onPrev,
-  onNext,
-  onLoad
+  prevNews,
+  nextNews,
+  initNews,
 };
 
 // Action Handlers
 
 const ACTION_HANDLERS = {
-  [PAGE_LOAD]: ({}, {data, page}) => ({
+  [PAGE_LOAD]: (arg, {data, page}) => ({
     list: data,
     page
   })
@@ -56,7 +56,7 @@ const ACTION_HANDLERS = {
 
 const initialState = {
   list: [],
-  page: 1
+  page: 'loading...'
 };
 
 const reducer = (state = initialState, action) => {

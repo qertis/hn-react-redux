@@ -6,18 +6,17 @@ import PropTypes from 'prop-types';
 class App extends React.Component {
 
   shouldComponentUpdate() {
-    return false
+    return false;
   }
 
   render() {
     return (
       <Provider store={this.props.store}>
-        <Router history={browserHistory} children={this.props.routes}/>
+        <Router history={browserHistory} children={this.props.routes} />
       </Provider>
-    )
+    );
   }
 }
-
 App.propTypes = {
   store: PropTypes.object.isRequired,
   routes: PropTypes.object.isRequired,
